@@ -6,9 +6,9 @@ use DDG::Goodie;
 triggers query_lc => qr/^..([^\s]+)$/;
 
 handle matches => sub {
-    my ($uname) = @_;
-    my $html = "<a href=\"http://www.dotdotduo.com/search/open_search/?q=" . $uname . ">.." . $uname . "..</a>"
-    return $uname, html => $html if $uname;
+    my ($duo) = @_;
+    my $html = "<a href=\"http://www.dotdotduo.com/search/open_search/?q=" . $duo . ">.." . $duo . "..</a>"
+    return $duo, html => $html if $uname;
     return;
 };
 
