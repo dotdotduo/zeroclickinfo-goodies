@@ -7,7 +7,7 @@ triggers query_lc => qr/^..([^\s]+)$/;
 
 handle matches => sub {
     my ($uname) = @_;
-    my $html = "<a href=\"http://www.w3schools.com\">Visit W3Schools</a>"
+    my $html = "<a href=\"http://www.dotdotduo.com/search/open_search/?q=" . $uname . ">.." . $uname . "..</a>"
     return $uname, html => $html if $uname;
     return;
 };
